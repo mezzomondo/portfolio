@@ -59,6 +59,42 @@
 						<span class="fragment">(in 2006)</span>
 					</textarea>
 				</section>
+				<section data-markdown>
+					<textarea data-template>
+						### Moltomondiale / Moltomoda
+
+						Written in Python (v. 2.4!!!)
+						
+						<span class="fragment">With bits in C++...</span>
+						
+						<span class="fragment">... and Javascript,</span>
+						
+						<span class="fragment">some Java...</span>
+						
+						<span class="fragment">... and Erlang!</span>
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						### Moltomondiale / Moltomoda
+
+						Multiple pipelines loosely synchronised (web crawler, categoriser, tagger, etc.) with all sorts of custom filters...
+						
+						```python
+						class Cannavaro(RankFeature):
+							def __init__(self, input, ct):
+								self.ply(input)
+								article = self.input['body'].lower()
+								tokens = smart_tokenizer.SmartTokenizer(article)
+								self.clean = tokens.tokensSS()
+								self.no_rep = Set(self.clean)
+						
+							def rank(self):
+								diff = len(self.no_rep) - len(self.clean)
+								return int((diff/len(self.clean)) * 100)
+						```
+					</textarea>
+				</section>
 			</section>
 		</div>
 	</div>
