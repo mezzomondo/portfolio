@@ -177,7 +177,7 @@
 						```haskell
 							app :: ScottyM ()
 							app = do
-								get "/api/v2/ships/:shipId" $ do
+								get "/email_ok/:shipId" $ do
 								shipId <- param "shipid"
 								let numRows = getNumEmail shipId
 								case numRows of
@@ -189,7 +189,18 @@
 					<textarea data-template>
 						## CMS Plus
 
-						Extensive use of RabbitMQ
+						Extensive use of RabbitMQ for multiple parallel queues
+
+						```python
+							if __name__ == "__main__":
+								connection = pika.BlockingConnection(
+									pika.ConnectionParameters('localhost', 5672, '/', credentials))
+								channel = connection.channel()
+								channel.queue_declare(queue=qname, durable=True)
+								channel.basic_qos(prefetch_count=1)
+								channel.basic_consume(callback, queue=qname)
+								channel.start_consuming()
+						```
 					</textarea>
 				</section>
 			</section>
