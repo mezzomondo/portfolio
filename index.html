@@ -159,21 +159,13 @@
 
 						|v1|v2|
 						|--|--|
-						|```python
-						@ships.route('/email_ok/<int:ship_id>')
-						def check_email(ship_id):
-							numrows = get_num_email(ship_id)
-							if numrows == 0:
-								return "" 204
-						 ```|```haskell
-							app :: ScottyM ()
-							app = do
-								get "/api/v2/ships/:shipId" $ do
-								shipId <- param "shipid"
-								let numRows = getNumEmail shipId
-								case numRows of
-									Nothing -> status status204
-						     ```|
+						|`@ships.route('/email_ok/<int:ship_id>')`|`app :: ScottyM ()`|
+						|`def check_email(ship_id):`|`app = do`|
+						|`    numrows = get_num_email(ship_id)`|`    get "/api/v2/ships/:shipId" $ do`|
+						|`    if numrows == 0:`|`    shipId <- param "shipid"`|
+						|`        return "" 204`|`    let numRows = getNumEmail shipId`|
+						||`    case numRows of`|
+						||`        Nothing -> status status204`|    
 					</textarea>
 				</section>
 				<section data-markdown>
