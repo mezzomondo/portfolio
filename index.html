@@ -153,20 +153,43 @@
 						<span class="fragment">Frontend in Javascript with Jquery</span>
 					</textarea>
 				</section>
-				<section data-markdown>
+				<section>
+					<h2>CMS Plus</h2>
 					<textarea data-template>
-						## CMS Plus
-
-						|v1|v2|
-						|--|--|
-						|`@ships.route('/email_ok/<int:ship_id>')`|`app :: ScottyM ()`|
-						|`def check_email(ship_id):`|`app = do`|
-						|`    numrows = get_num_email(ship_id)`|`    get "/api/v2/ships/:shipId" $ do`|
-						|`    if numrows == 0:`|`    shipId <- param "shipid"`|
-						|`        return "" 204`|`    let numRows = getNumEmail shipId`|
-						||`    case numRows of`|
-						||`        Nothing -> status status204`|    
-					</textarea>
+						<table>
+							<thead>
+								<tr>
+									v1
+								</tr>
+								<tr>
+									v1
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<pre>
+@ships.route('/email_ok/<int:ship_id>')
+def check_email(ship_id):
+	numrows = get_num_email(ship_id)
+	if numrows == 0:
+	return "" 204
+    									</pre>
+									</td>
+									<td>
+										<pre>
+app :: ScottyM ()
+app = do
+	get "/api/v2/ships/:shipId" $ do
+	shipId <- param "shipid"
+	let numRows = getNumEmail shipId
+	case numRows of
+		Nothing -> status status204
+										</pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
