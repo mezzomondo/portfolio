@@ -122,6 +122,67 @@
 						And this was Moltomoda in 2009, still automatically generated.
 					</textarea>
 				</section>
+				<section data-markdown>
+					<textarea data-template>
+						### Moltomondiale / Moltomoda
+
+						Co-author: Andrea Baresi
+					</textarea>
+				</section>
+			</section>
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+						## CMS Plus (2011)
+
+						EU-funded Research and Innovation Project
+
+						Automatic management of on-board outfit and nautical charts updates for Cargo, Passenger and Private ships.
+
+						<span class="fragment">In production since 2012.</span>
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## CMS Plus
+
+						First version of the backend written in Python with Flask
+
+						<span class="fragment">Version 2 written in Haskell with Scotty</span>
+
+						<span class="fragment">Frontend in Javascript with Jquery</span>
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## CMS Plus
+
+						|v1|v2|
+						|--|--|
+						|```python
+						@ships.route('/email_ok/<int:ship_id>')
+						def check_email(ship_id):
+							numrows = get_num_email(ship_id)
+							if numrows == 0:
+								return "" 204
+						 ```|```haskell
+							app :: ScottyM ()
+							app = do
+								get "/api/v2/ships/:shipId" $ do
+								shipId <- param "shipid"
+								let numRows = getNumEmail shipId
+								case numRows of
+									Nothing -> status status204
+						     ```|
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## CMS Plus
+
+						Extensive use of RabbitMQ
+					</textarea>
+				</section>
 			</section>
 		</div>
 	</div>
