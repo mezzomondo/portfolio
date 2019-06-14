@@ -153,42 +153,37 @@
 						<span class="fragment">Frontend in Javascript with Jquery</span>
 					</textarea>
 				</section>
-				<section>
-					<h2>CMS Plus</h2>
-						<table>
-							<thead>
-								<tr>
-									v1
-								</tr>
-								<tr>
-									v1
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>
-										<pre>
-@ships.route('/email_ok/&lt;int:ship_id&gt;')
-def check_email(ship_id):
-	numrows = get_num_email(ship_id)
-	if numrows == 0:
-	return "" 204
-    									</pre>
-									</td>
-									<td>
-										<pre>
-app :: ScottyM ()
-app = do
-	get "/api/v2/ships/:shipId" $ do
-	shipId &lt;- param "shipid"
-	let numRows = getNumEmail shipId
-	case numRows of
-		Nothing -&gt; status status204
-										</pre>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+				<section data-markdown>
+					<textarea data-template>
+						## CMS Plus
+
+						v1
+
+						```python
+							@ships.route('/email_ok/<int:ship_id>')
+							def check_email(ship_id):
+								numrows = get_num_email(ship_id)
+								if numrows == 0:
+								return "" 204
+						```
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## CMS Plus
+
+						v2
+
+						```haskell
+							app :: ScottyM ()
+							app = do
+								get "/api/v2/ships/:shipId" $ do
+								shipId <- param "shipid"
+								let numRows = getNumEmail shipId
+								case numRows of
+									Nothing -> status status204
+						```
+					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
