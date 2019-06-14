@@ -155,7 +155,6 @@
 				</section>
 				<section>
 					<h2>CMS Plus</h2>
-					<textarea data-template>
 						<table>
 							<thead>
 								<tr>
@@ -169,7 +168,7 @@
 								<tr>
 									<td>
 										<pre>
-@ships.route('/email_ok/<int:ship_id>')
+@ships.route('/email_ok/&lt;int:ship_id&gt;')
 def check_email(ship_id):
 	numrows = get_num_email(ship_id)
 	if numrows == 0:
@@ -181,10 +180,10 @@ def check_email(ship_id):
 app :: ScottyM ()
 app = do
 	get "/api/v2/ships/:shipId" $ do
-	shipId <- param "shipid"
+	shipId &lt;- param "shipid"
 	let numRows = getNumEmail shipId
 	case numRows of
-		Nothing -> status status204
+		Nothing -&gt; status status204
 										</pre>
 									</td>
 								</tr>
