@@ -241,12 +241,13 @@
 						```haskell
 							instance MutateStandard BaseGene where
 							-- making an identical copy of the parent,
-							-- and then probabilistically mutating it to produce the offspring.
+							-- and then probabilistically mutating it
+							-- to produce the offspring.
 								mutateStandard (BaseGene g) = do
 									seed <- get
 									let (factor, newseed) = pick [-1.0, 1.0] seed
 									put newseed
-							return (BaseGene (g + factor))
+							    	return (BaseGene (g + factor))
 						```
 					</textarea>
 				</section>
