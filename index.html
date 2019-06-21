@@ -293,6 +293,33 @@
 
 					</textarea>
 				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Miscellaneous
+
+						[Using TesorFlow for Reinforcment Learning with Haskell](https://github.com/mezzomondo/ZuriHac2018/tree/master/HaRL9000)
+
+						```haskell
+							import TensorFlow.Core
+								(Tensor, Value, feed, encodeTensorData, Scalar(..), ControlNode, Build, TensorData)
+							import TensorFlow.Ops
+								(add, placeholder, sub, reduceSum, mul, save, restore)
+							import TensorFlow.GenOps.Core (square)
+							import TensorFlow.Variable (readValue, initializedVariable, Variable)
+							import TensorFlow.Session (runSession, run, runWithFeeds, build, Session)
+							import TensorFlow.Minimize (gradientDescent, minimizeWith)
+							import TensorFlow.Tensor
+
+							data Model = Model {
+								train :: TensorData Float -> TensorData Float -> Session ()
+								, getResults :: Session (Scalar Float, Scalar Float)
+							}
+						```
+
+						Also seen at ZuriHac 2018
+
+					</textarea>
+				</section>
 			</section>
 		</div>
 	</div>
