@@ -275,6 +275,24 @@
 						```
 					</textarea>
 				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Miscellaneous
+
+						[OpenAI Frozen Lake solution in Haskell](https://github.com/mezzomondo/ZuriHac2018/tree/master/fl-naive-hs/src)
+
+						```haskell
+							frozenLake :: ClientM Env
+							frozenLake = do
+								env <- buildEnv
+								runReaderT (replicateM_ (envNumEpisodes env) agent) env
+								return env
+						```
+
+						As seen at ZuriHac 2018
+
+					</textarea>
+				</section>
 			</section>
 		</div>
 	</div>
