@@ -207,6 +207,18 @@
 					<textarea data-template>
 						## CMS Plus
 
+						Complex topology for data input and web notifications.
+
+						```python
+							import zmq
+							from flask_socketio import emit
+						```
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## CMS Plus
+
 						![CMS Plus infrastructure](assets/cplus1.png) <!-- .element height="60%" width="60%" -->
 
 						Mixed AWS and On-premises infrastructure
@@ -245,6 +257,25 @@
 						<span class="fragment">Automatic management of electronic invoicing</span>
 
 						<span class="fragment">And much much more</span>
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Azienda-Online
+
+						Modern interface to AWS services
+
+						```php
+							$this->client->selectObjectContent([
+								'Bucket' => $bucket,
+								'Key' => $key,
+								'ExpressionType' => 'SQL',
+								'Expression' => 'SELECT s.HFC.dateTime, ... FROM S3Object s',
+								'InputSerialization' => ['JSON' => ['Type' => 'Document']],
+								'OutputSerialization' => ['JSON' => []]
+							]);
+						```
+
 					</textarea>
 				</section>
 			</section>
